@@ -59,7 +59,7 @@ module SimpleNavigationRenderers
             if split
               splitted_simple_part + splitted_dropdown_part
             else
-              dropdown_part( item.name + ' ' + caret )
+              dropdown_part( item.name )
             end
           else
             content_tag(:li, dropdown_submenu_link, options)
@@ -80,7 +80,7 @@ module SimpleNavigationRenderers
         link_options = {}
         options[:id] = nil
         options[:class] = [ options[:class], "dropdown-split-right" ].flatten.compact.join(' ')
-        dropdown_part( caret )
+  
       end
 
       def dropdown_part( name )
