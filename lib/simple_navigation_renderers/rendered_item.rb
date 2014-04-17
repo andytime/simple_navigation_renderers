@@ -40,7 +40,7 @@ module SimpleNavigationRenderers
       attr_reader :item, :level, :bootstrap_version, :options, :navbar_text, :divider, :header, :link_options, :split
 
       def li_text
-        content_tag(:li, content_tag(:p, item.name, {class: 'navbar-text'}), options)
+        content_tag(:li, content_tag(:p, item.name, {class: 'navbar-text text-muted'}), options)
       end
 
       def li_divider
